@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using OrderingSystem.BusinessLogic.Utils;
 using OrderingSystem.Global.Common;
 using OrderingSystem.Global.DTOs.CustomerDtos;
+using OrderingSystem.Global.Entities;
 using OrderingSystem.Global.Interfaces.Services;
 using OrderingSystem.Global.Interfaces.UnitOfWork;
-using OrderingSystem.BusinessLogic.Utils;
-using OrderingSystem.Global.Entities;
 
 namespace OrderingSystem.BusinessLogic.Services
 {

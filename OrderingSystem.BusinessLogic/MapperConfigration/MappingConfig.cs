@@ -5,7 +5,7 @@ using OrderingSystem.Global.Entities;
 
 namespace OrderingSystem.BusinessLogic.MapperConfigration
 {
-    public class MappingConfig: Profile
+    public class MappingConfig : Profile
     {
 
         public MappingConfig()

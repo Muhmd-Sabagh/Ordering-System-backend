@@ -6,7 +6,10 @@ namespace OrderingSystem.Global.Entities
     {
         public string Title { get; set; } = string.Empty;
         public string Details { get; set; } = string.Empty;
-        public decimal ItemPrice { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price { get; set; }
+
         [ForeignKey(nameof(Customer))]
         public int? CustomerId { get; set; }
 

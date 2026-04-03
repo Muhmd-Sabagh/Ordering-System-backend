@@ -16,7 +16,7 @@ namespace OrderingSystem.API
             // Using Serilog for Logging
             Log.Logger = new LoggerConfiguration()
                .WriteTo.Console()
-               .WriteTo.File("Losgs/log-.txt", rollingInterval: RollingInterval.Day)
+               .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
                .CreateLogger();
 
             var builder = WebApplication.CreateBuilder(args);

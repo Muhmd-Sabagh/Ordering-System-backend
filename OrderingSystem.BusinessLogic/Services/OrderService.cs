@@ -28,7 +28,7 @@ namespace OrderingSystem.BusinessLogic.Services
                     return Result<OrderResponseDto>.Failure("Customer not found.");
 
                 if (customer.BannedUntil.HasValue && customer.BannedUntil.Value > DateTime.UtcNow)
-                    return Result<OrderResponseDto>.Failure($"Your are banned from making orders until {customer.BannedUntil.Value:yyyy-MM-dd HH:mm:ss}.");
+                    return Result<OrderResponseDto>.Failure($"Your are banned from making orders until {customer.BannedUntil.Value:yyyy-MM-dd HH:mm:ss} UTC.");
 
                 var order = _mapper.Map<Order>(request);
                 order.CustomerId = customerId;

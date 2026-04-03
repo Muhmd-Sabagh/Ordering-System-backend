@@ -16,7 +16,7 @@ namespace OrderingSystem.Global.Entities
         [MaxLength(20)]
         public string Username { get; set; } = string.Empty;
 
-        [MaxLength(20)]
+        [MaxLength(255)]
         public string PasswordHash { get; set; } = string.Empty;
 
         public DateTime? BannedUntil { get; set; }

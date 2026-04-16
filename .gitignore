@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # Ignore Migrations
 OrderingSystem.DataAccess/Migrations/*.cs
+/OrderingSystem.API/.config

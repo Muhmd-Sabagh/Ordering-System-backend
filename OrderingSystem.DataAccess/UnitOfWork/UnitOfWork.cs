@@ -10,17 +10,17 @@ namespace OrderingSystem.DataAccess.UnitOfWork
     {
         private readonly ApplicationDbContext _context;
 
-        private IGenericRepository<Customer>? _customers;
-        private IGenericRepository<Order>? _orders;
+        private ICustomerRepository? _customers;
+        private IOrderRepository? _orders;
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IGenericRepository<Customer> Customers => _customers ??= new GenericRepository<Customer>(_context);
+        public ICustomerRepository Customers => _customers ??= new CustomerRepository(_context);
 
-        public IGenericRepository<Order> Orders => _orders ??= new GenericRepository<Order>(_context);
+        public IOrderRepository Orders => _orders ??= new OrderRepository(_context);
 
         public async Task<int> CompleteAsync()
         {

@@ -15,6 +15,8 @@ namespace OrderingSystem.DataAccess
                 options.UseLazyLoadingProxies().UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(Repositories.GenericRepository<>));
+            services.AddScoped<ICustomerRepository, Repositories.CustomerRepository>();
+            services.AddScoped<IOrderRepository, Repositories.OrderRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
             return services;
